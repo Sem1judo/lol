@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_third"
+    tools:context=".fragments.games.seawheel.SeaWheelFragment">
+
+    <LinearLayout
+        android:id="@id/ocean_ll_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ocean_balanceLayout"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_balance"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ocean_trx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/jost_bold"
+                android:text="TOTAL"
+                android:textColor="#04E679"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/ocean_balanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/jost_medium"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ocean_winLayout"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/background_balance"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/jost_bold"
+                android:gravity="center_vertical"
+                android:text="WIN"
+                android:textColor="#04E679" />
+
+
+            <TextView
+                android:id="@+id/ocean_winTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/jost_medium"
+                android:gravity="center"
+                android:text=" 100"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ocean_iv_wheel"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/wheel"
+        app:layout_constraintBottom_toBottomOf="@id/ocean_background_wheeel"
+        app:layout_constraintEnd_toEndOf="@id/ocean_background_wheeel"
+        app:layout_constraintStart_toStartOf="@id/ocean_background_wheeel"
+        app:layout_constraintTop_toTopOf="@id/ocean_background_wheeel" />
+
+    <ImageView
+        android:id="@+id/ocean_background_wheeel"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:background="@drawable/spinnings_wheel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:rotation="-15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ocean_ll_b" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ocean_playLayout"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/btn_retry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ocean_background_wheeel">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_balance"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/jost_bold"
+                android:text="BET"
+                android:textColor="#04E679" />
+
+            <ImageButton
+                android:id="@+id/ocean_btn_minus"
+                android:layout_width="15dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_minus" />
+
+            <TextView
+                android:id="@+id/ocean_tv_bid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/jost_bold"
+                android:text="15000"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/ocean_btn_plus"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_plus" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/jost_bold"
+            android:text="Please place your bet"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

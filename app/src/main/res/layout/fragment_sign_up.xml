@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".fragments.menu.SignUpFragment">
+
+    <LinearLayout
+        android:id="@+id/ocean_main_ll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_item"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.9">
+
+        <TextView
+            android:id="@+id/ocean_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/jost_bold"
+            android:gravity="center"
+            android:text="Please enter \nyour phone"
+            android:textColor="#0347CE"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/ocean_input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:background="@drawable/background_phone"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ocean_ccp_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccpDialog_keyboardAutoPopup="false"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_contentColor="@color/white"
+                app:ccp_countryAutoDetectionPref="LOCALE_ONLY"
+                app:ccp_showArrow="true"
+                app:ccp_showFlag="true"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="true"
+                app:ccp_textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ocean_et_input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:fontFamily="@font/jost_medium"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/ocean_btn_play"
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_start" />
+
+        <TextView
+            android:id="@+id/ocean_tv_anonymous_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/jost_medium"
+            android:text="Anonymous Mode"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
